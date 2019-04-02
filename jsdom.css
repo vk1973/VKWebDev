@@ -1,0 +1,75 @@
+body {
+margin          :0px;
+font-size       :12px;
+background-color: rgb(176,207,238);
+}
+
+#divtitleid {
+width           :40vw;
+margin-left     : 50px;
+margin-top      : 50px;
+padding         :10px;
+background-color: rgb(242,232,139);
+}
+
+#div1head {
+font-family     :cambria;
+}
+
+#inptxt {
+width           :250px;
+font-size       :1rem;
+font-family     :cambria;
+
+}
+
+#div1btnadd {
+width           :100px;
+margin-left     : 10px;
+font-size       :1rem;
+font-family     : cambria;
+}
+
+#div1btndel {
+width           :100px;
+margin-left     : 10px;
+font-size       :1rem;
+font-family     : cambria;
+}
+
+#divlistid {
+  width           :40vw;
+  margin-left     : 50px;
+  margin-top      : 20px;
+  padding         :10px;
+  background-color: rgb(242,232,139);
+}
+
+.ulclass {
+  font-size       :1rem;
+  font-family     :cambria;
+  display: inline-block;
+  width: 35vw;
+
+}
+
+.liclass {
+  padding-right: : 3px;
+  padding-left: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  position: relative;
+  display:flex;
+  justify-content: flex-start;
+  margin:0px;
+
+}
+
+.delbtnclass {
+  position:absolute;
+  right:0px;
+}
+
+.done {
+  text-decoration: line-through;
+}
