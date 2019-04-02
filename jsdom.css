@@ -6,14 +6,17 @@ background-color: rgb(176,207,238);
 
 #divtitleid {
 width           :40vw;
-margin-left     : 50px;
+/*margin-left     : 50px;*/
 margin-top      : 50px;
 padding         :10px;
 background-color: rgb(242,232,139);
+margin:50px auto 0px auto;
+text-align: center;
 }
 
 #div1head {
 font-family     :cambria;
+text-align: center;
 }
 
 #inptxt {
@@ -42,7 +45,8 @@ font-family     : cambria;
   margin-left     : 50px;
   margin-top      : 20px;
   padding         :10px;
-  background-color: rgb(242,232,139);
+  background-color: rgb(176,207,238);
+  margin: 10px auto;
 }
 
 .ulclass {
@@ -68,6 +72,11 @@ font-family     : cambria;
 .delbtnclass {
   position:absolute;
   right:0px;
+  border:none;
+  background-color: transparent;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .done {

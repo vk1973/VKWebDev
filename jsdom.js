@@ -16,17 +16,24 @@ function addshoppinglistitem()
       ul.appendChild(linode);
       linode.className= "liclass";
       lstinp.value="";
+      
       adddeleteButton();
-      deleteParentNodeOnClick();
-      // var btn=document.createElement("button");
-      // btn.appendChild(document.createTextNode("-"));
-      // linode.appendChild(btn);
-      // btn.className="delbtnclass";
-    //   btn.addEventListener("click", function(e) {
-    //   e.target.parentNode.remove();
-    // });
+      listdivcolor();
     }
   }
+
+//Set List Div background-color
+
+function listdivcolor() {
+  var div = document.querySelectorAll('ul > li');
+  var divlilen = div.length;
+  if (divlilen > 0) {
+    document.getElementById("divlistid").style.backgroundColor = "rgb(242,232,139)";
+  } else {
+    document.getElementById("divlistid").style.backgroundColor = "rgb(176,207,238)";
+  }
+}
+
 
 // Delete all shopping list items by clicking delete list button
 function deleteshoppinglist(){
@@ -44,20 +51,17 @@ function adddeleteButton(){
   var lstbtnlen = libtn.length;
   for( i=0;i<lstbtnlen;i++){
   	var btn=document.createElement("button");
-    btn.appendChild(document.createTextNode("-"));
+    btn.appendChild(document.createTextNode("X"));
     libtn[i].appendChild(btn);
     btn.className="delbtnclass";
+
+    btn.addEventListener("click", function(e) {
+      e.target.parentNode.remove();
+      listdivcolor();
+    });
   }
 }
 
-function deleteParentNodeOnClick() {
-    var btndelli = document.querySelectorAll("button");
-    for (var i = 0; i < btndelli.length; i++) {
-        btndelli[i].addEventListener("click", function(e) {
-          e.target.parentNode.remove();
-        });
-    }
-}
 
 // Toggle strike through for each list line item
 ul.addEventListener("click", function(e) {
@@ -70,5 +74,4 @@ e.target.classList.toggle("done");
 
 btnadd.addEventListener("click", addshoppinglistitem);
 btndel.addEventListener("click", deleteshoppinglist);
-adddeleteButton();
-deleteParentNodeOnClick();
+
