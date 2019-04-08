@@ -1,0 +1,52 @@
+body {
+margin:0px;
+font-family: sans-serif;
+font-size:12px;
+}
+
+.navul {
+display:flex;
+list-style:none;
+}
+
+.incadd {
+width:40vw;
+margin:50px auto;
+}
+
+#incaddbtn{
+  color: #FFF;
+  background: #0073ad;
+  border: 2px outset #0073ad;
+  float: right;
+  cursor: pointer;
+  height:28px;
+margin-right: 150px;
+}
+
+.navli {
+padding: 10px;
+font-size: 1.2rem;
+}
+
+.incadd label {
+  text-align: right;
+  padding-right: 10px;
+  margin:10px;
+  width: 120px;
+}
+
+.incadd input {
+  width: 300px;
+  margin:10px;
+
+}
+.incadd label, .incadd input {
+float: left;
+font-size: 1rem;
+
+}
+
+.incadd br {
+clear: both;
+}

@@ -1,0 +1,39 @@
+body {
+font-family: sans-serif;
+font-size: 12px;
+margin:0;
+}
+
+.issuediv {
+margin: 50px auto;
+background-color: rgb(235,241,244);
+width: 50vw;
+border-color: rgb(156,154,157);
+border-style: solid;
+padding:40px;
+}
+
+.issuediv label {
+text-align:right;
+font-size: 1rem;
+color:rgb(240,79,68);
+padding-right: 20px;
+width:160px;
+float: left;
+margin-bottom: 30px;
+}
+
+
+
+.issuediv input {
+font-size: 1rem;
+width: 400px;
+}
+
+.issuediv br {
+clear:both;
+}
+
+.issuediv textarea {
+font-size:1rem;
+}
