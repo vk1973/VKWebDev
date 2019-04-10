@@ -7,7 +7,7 @@ var issuede = document.getElementById('issuedesc');
 var subbtn = document.getElementById('incaddbtn');
 
 //function to load the table upon window load with dummy issue list
-function loadtable(issueid) {
+function loadtable() {
     // var issueid = "IM8000500";
     let today = new Date().toISOString().slice(0, 10)
     var seq = 0;
@@ -28,7 +28,9 @@ function loadtable(issueid) {
     // var tableloaded = document.getElementById("table");
     // var rowindex = tableloaded.rows.length-1;
     // issueid = tableloaded.rows[rowindex].cells[0];
-    return (issueid+loadsize-1);
+    // return (issueid+loadsize-1);
+    document.getElementById("incadd").style.display = "none";
+    document.getElementById("divtable").className ="tabledivclass";
 }
 
 
@@ -55,18 +57,18 @@ function createtable(issuearray){
 var tbody = document.querySelector("#table tbody");
 issuearray.forEach((obj,i) => {
     var tr = tbody.insertRow(i);
-    Object.keys(obj).forEach((name, j) => { 
+    Object.keys(obj).forEach((name, j) => {
       var cell = tr.insertCell(j);
-      cell.innerHTML = obj[name];   
+      cell.innerHTML = obj[name];
     });
-    
+
     //add edit option with a link to edit page
     var link = document.createElement("a");
     link.setAttribute("href", "incedit.html")
     link.className = "linkclass";
     var linkText = document.createTextNode("Edit");
     link.appendChild(linkText);
-        
+
     var newcell = tr.insertCell(-1);
     newcell.appendChild(link);
     tbody.appendChild(tr);
@@ -78,13 +80,13 @@ function getlastimseq() {
     var tableloaded = document.getElementById("table");
     var rowindex = tableloaded.rows.length-1;
     var last = tableloaded.rows[rowindex].cells[0].innerHTML;
-    
+
     var lastid = last.substring(2,9);
-    
+
     return parseInt(lastid);
 }
 
 
 var incidentstart = 8000500;
-window.onload = lastrow = loadtable(incidentstart);
+window.onload = loadtable;
 subbtn.addEventListener("click", createincident);

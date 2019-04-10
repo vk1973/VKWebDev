@@ -59,3 +59,14 @@ clear: both;
   /*padding-right: 20px;*/
   margin:10px;
 }
+
+.tabledivclass {
+  border-color: rgb(138,133,142);
+  width=100%;
+
+}
+
+.container {
+width: 60vw;
+margin: 20px auto;
+}
