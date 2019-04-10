@@ -19,9 +19,19 @@
 <div class = "incadd">
   <label>Issue Id:</label><input type="text" id="issueid" placeholder="Issue Id" disabled = "disabled"/><br>
   <label>Issue Title:</label><input type="text" id="issuetitle" placeholder="Issue Title"/><br>
+  <label> Application:</label><select  id="application">
+    <option value="Application 1">Application 1</option>
+    <option value="Application 2">Application 2</option>
+    <option value="Application 3">Application 3</option>
+    <option value="Application 4">Application 4</option>
+  </select><br>
+  <label> Issue Status:</label><select  id="status">
+    <option value="Open">Open</option>
+    <option value="Work in progress">Work in progress</option>
+    <option value="Resolved">Resolved</option>
+  </select><br>
   <label>Issue Occurred Date:</label><input type="date" id="issuedte" placeholder="Issue Occurred Date"/><br>
-  <label>Application:</label><input type="list" id="application" placeholder="Application"/><br>
-  <label>Issue Description: </label><textarea name="" id="issuedesc" cols="48" rows="10" placeholder="Issue Desc"></textarea><br>
+  <label>Issue Description: </label><textarea name="" id="issuedesc" cols="40" rows="10" placeholder="Issue Desc"></textarea><br>
   <br>
   <br>
   <button id="incaddbtn">Submit</button>
@@ -29,7 +39,19 @@
 <br>
 <br><br>
 
-<div id="table">
+<div id="divtable">
+  <table id="table" class="tableclass" border="1">
+   
+      <thead>
+        <th>Incident Number</th>
+        <th>Incident Title</th>
+        <th>Application</th>
+        <th>Issue Status</th>
+        <th>Incident Created date</th>
+        <th>Issue Description</th>
+      </thead>
+      <tbody id="tablebody"> </tbody>
+   </table>
 
 
 </div>

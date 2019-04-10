@@ -21,7 +21,7 @@ margin:50px auto;
   float: right;
   cursor: pointer;
   height:28px;
-margin-right: 150px;
+  margin-right: 150px;
 }
 
 .navli {
@@ -33,20 +33,29 @@ font-size: 1.2rem;
   text-align: right;
   padding-right: 10px;
   margin:10px;
-  width: 120px;
+  width: 150px;
 }
 
 .incadd input {
   width: 300px;
   margin:10px;
-
 }
-.incadd label, .incadd input {
+
+.incadd select {
+  padding-right: 10px;
+  margin:10px;
+}
+
+.incadd label, .incadd input, .incadd select{
 float: left;
 font-size: 1rem;
-
 }
 
 .incadd br {
 clear: both;
+}
+
+.incadd textarea {
+  /*padding-right: 20px;*/
+  margin:10px;
 }
