@@ -8,6 +8,7 @@ var subbtn = document.getElementById('incaddbtn');
 
 //function to load the table upon window load with dummy issue list
 function loadtable() {
+    var action = "load";
     var incidentstart = 8000500;
     let today = new Date().toISOString().slice(0, 10)
     var seq = 0;
@@ -24,19 +25,29 @@ function loadtable() {
         issue.description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper eget augue et accumsan. In pellentesque libero a molestie ullamcorper. Nullam eget aliquet mi. Donec consequat magna ut ligula volutpat tincidunt. Ut fringilla neque eros, non auctor lacus congue quis. Sed vitae purus in ex luctus commodo. ';
         issuelist.push(issue);
       }
-    createtable(issuelist);
-    // var tableloaded = document.getElementById("table");
-    // var rowindex = tableloaded.rows.length-1;
-    // issueid = tableloaded.rows[rowindex].cells[0];
-    // return (issueid+loadsize-1);
-    // document.getElementById("incadd").style.display = "none";
-    // document.getElementById("divtable").className ="tabledivclass";
+    createtable(issuelist, action);
+    
+
+    var tbl = document.querySelector("#table tbody");
+    if (tbl != null) {
+        for (var i = 0; i < tbl.rows.length; i++) {
+            for (var j = 0; j < tbl.rows[i].cells.length; j++)
+              if (j === 1) {
+                tbl.rows[i].cells[j].onclick = function () { getval(this); };}
+        }
+    }
+
+    function getval(cel) {
+        alert(cel.innerHTML);
+    }
+
 }
 
 
 //function attached to create incident html page will add screen inputs as a new issue
 function createincident()
 {
+  var action = "create";
   var id = 0;
   var issue = {};
   var issuelist = [];
@@ -49,20 +60,27 @@ function createincident()
   issue.cdate = issued.value;
   issue.description = issuede.value;
   issuelist.push(issue);
-  createtable(issuelist);
+  createtable(issuelist, action);
   document.getElementById("divtable").style.display="block";
   document.getElementById("incadd").style.display="none";
 }
 
 //function creates a new row for every object in the array
-function createtable(issuearray){
+function createtable(issuearray, command){
 var tbody = document.querySelector("#table tbody");
 issuearray.forEach((obj,i) => {
-    var tr = tbody.insertRow(i);
+    
+    if (command === "create"){
+      var tableloaded = document.getElementById("table");
+      var rowindex = tableloaded.rows.length-1;
+      var tr = tbody.insertRow(rowindex);
+    } else {
+    var tr = tbody.insertRow(i);}
+   
     Object.keys(obj).forEach((name, j) => {
       if (j === 0){ 
         var cell = tr.insertCell(j);
-        cell.innerHTML = '<a href="incedit.html">'+obj[name]+'</a>';
+        cell.innerHTML = '<a href="#">'+obj[name]+'</a>';
       } else {
       var cell = tr.insertCell(j);
       cell.innerHTML = obj[name];}
@@ -91,7 +109,7 @@ function getlastimseq() {
     var rowindex = tableloaded.rows.length-1;
     var last = tableloaded.rows[rowindex].cells[0].innerHTML;
 
-    lastid = last.substring(25,32);
+    lastid = last.substring(14,21);
 
     return parseInt(lastid);
 }
@@ -115,4 +133,16 @@ var list = document.getElementById("navul").getElementsByTagName("li");
 
 for (i = 0; i<list.length; i++) {
   list[i].addEventListener("click",togglela);
-}
+};
+
+// var tbl = document.querySelector("#table tbody");
+//     if (tbl != null) {
+//         for (var i = 0; i < tbl.rows.length; i++) {
+//             for (var j = 0; j < tbl.rows[i].cells.length; j++)
+//                 tbl.rows[i].cells[j].onclick = function () { getval(this); };
+//         }
+//     }
+
+//     function getval(cel) {
+//         alert(cel.innerHTML);
+//     }

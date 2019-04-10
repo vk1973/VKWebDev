@@ -77,7 +77,8 @@ clear: both;
 
 }
 thead {
-  background: #b19eb6;
+  background: mediumpurple;
+  color: white;
 }
 th, td {
   padding: 10px;
