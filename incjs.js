@@ -8,14 +8,14 @@ var subbtn = document.getElementById('incaddbtn');
 
 //function to load the table upon window load with dummy issue list
 function loadtable() {
-    // var issueid = "IM8000500";
+    var incidentstart = 8000500;
     let today = new Date().toISOString().slice(0, 10)
     var seq = 0;
     var issuelist = [];
     var loadsize = 10
     for (i = 0; i < loadsize; i++) {
         var issue = {};
-        seq = issueid + i;
+        seq = incidentstart + i;
         issue.id = 'IM' + seq;
         issue.title = 'Title_'+ i;
         issue.application = 'Application_'+ i;
@@ -29,8 +29,8 @@ function loadtable() {
     // var rowindex = tableloaded.rows.length-1;
     // issueid = tableloaded.rows[rowindex].cells[0];
     // return (issueid+loadsize-1);
-    document.getElementById("incadd").style.display = "none";
-    document.getElementById("divtable").className ="tabledivclass";
+    // document.getElementById("incadd").style.display = "none";
+    // document.getElementById("divtable").className ="tabledivclass";
 }
 
 
@@ -50,6 +50,8 @@ function createincident()
   issue.description = issuede.value;
   issuelist.push(issue);
   createtable(issuelist);
+  document.getElementById("divtable").style.display="block";
+  document.getElementById("incadd").style.display="none";
 }
 
 //function creates a new row for every object in the array
@@ -58,21 +60,29 @@ var tbody = document.querySelector("#table tbody");
 issuearray.forEach((obj,i) => {
     var tr = tbody.insertRow(i);
     Object.keys(obj).forEach((name, j) => {
+      if (j === 0){ 
+        var cell = tr.insertCell(j);
+        cell.innerHTML = '<a href="incedit.html">'+obj[name]+'</a>';
+      } else {
       var cell = tr.insertCell(j);
-      cell.innerHTML = obj[name];
+      cell.innerHTML = obj[name];}
     });
 
     //add edit option with a link to edit page
-    var link = document.createElement("a");
-    link.setAttribute("href", "incedit.html")
-    link.className = "linkclass";
-    var linkText = document.createTextNode("Edit");
-    link.appendChild(linkText);
 
-    var newcell = tr.insertCell(-1);
-    newcell.appendChild(link);
-    tbody.appendChild(tr);
+    // new column for edit row is now commented since an hyperlink has been added to the first column
+    // var link = document.createElement("a");
+    // link.setAttribute("href", "incedit.html")
+    // link.className = "linkclass";
+    // var linkText = document.createTextNode("Edit");
+    // link.appendChild(linkText);
+
+    // var newcell = tr.insertCell(-1);
+    // newcell.appendChild(link);
+    // tbody.appendChild(tr);
   });
+  
+  document.getElementById("table").className ="tabledivclass";
 }
 
 function getlastimseq() {
@@ -81,12 +91,28 @@ function getlastimseq() {
     var rowindex = tableloaded.rows.length-1;
     var last = tableloaded.rows[rowindex].cells[0].innerHTML;
 
-    var lastid = last.substring(2,9);
+    lastid = last.substring(25,32);
 
     return parseInt(lastid);
 }
 
 
-var incidentstart = 8000500;
+function togglela(){
+  if (this.innerHTML === "New Incident"){
+    document.getElementById("incadd").style.display = "block";
+    document.getElementById("divtable").style.display = "none";
+  } else {
+    document.getElementById("incadd").style.display = "none";
+    document.getElementById("divtable").style.display = "block";
+  }
+}
+
 window.onload = loadtable;
+document.getElementById("incadd").style.display = "none";
 subbtn.addEventListener("click", createincident);
+
+var list = document.getElementById("navul").getElementsByTagName("li");
+
+for (i = 0; i<list.length; i++) {
+  list[i].addEventListener("click",togglela);
+}
