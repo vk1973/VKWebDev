@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" type="text/css" href="registration.css"
+    </head>
+    <body>
+        
+        <!--Registration form will have one main div cointatiner with one div for error messages, form with divs for each input field and a submit button outside the form-->
+        <div class="rgtrn-container">
+            <div class="rgtrn-img-div">
+                <img src="registration.png" class="rgtrn-img">
+            </div>
+            <form class=rgtrn-form>
+                <div class="rgtrn-header">
+                    <h1>Sign-up for a free account</h1>
+                    <p class=rgtrn-header-p-flex>
+                        <span class="span-header">Already have an account?</span>
+                        <a href="login.html">Log in</a>
+                    </p>
+                </div>
+                <fieldset>
+                <div class="rgtrn-txt-div">
+                    <label for="firstname" class="label-style">First and Last name</label>
+                    <input type="text" name="firstname" class ="input-text-style" autofocus="autofocus" placeholder="Enter First and Last name">
+                </div>
+                <!--<div class="rgtrn-txt-div">
+                    <label for="lastname" class="label-style">Lastname</label>
+                    <input type="text" name="lastname" class ="input-text-style" >
+                </div>-->
+                <div class="rgtrn-txt-div">
+                    <label for="address" class="label-style">Street address, City, ZIP Code</label>
+                    <input type="text" name="address" class ="input-text-style" placeholder="Enter street address, city and ZIP code" >
+                </div>
+                <!--<div class="rgtrn-txt-div">
+                    <label for="zipcode" class="label-style">ZIP Code</label>
+                    <input type="text" name="zipcode" class ="input-text-style" >
+                </div>-->
+                <div class="rgtrn-txt-div">
+                    <label for="Country" class="label-style">Country</label>
+                    <select name="country">
+                        <option value="United States">United States</option>
+                        <option value="Australia">Australia</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="India">India</option>
+                        <option value="NewZealand">NewZealand</option>
+                    </select>
+                </div>
+                <div class="rgtrn-txt-div">
+                    <label for="bday" class="label-style">Birthday</label>
+                    <input type="date" name="bday" class ="input-text-style" >
+                </div>
+                <div class="rgtrn-txt-div">
+                    <label for="gender" class="label-radio-style">Gender</label>
+                    <input type="radio" name="gender" value="male" class ="input-radio-style">Male
+                    <input type="radio" name="gender" value="Female" class ="input-radio-style">Female
+                    <input type="radio" name="gender" value="Other" class ="input-radio-style">Other
+                </div>
+                <div class="rgtrn-txt-div">
+                    <label for="interests" class="label-style">Interests</label>
+                    <input type="checkbox" name="gender" value="sports" class ="input-radio-style">Sports
+                    <input type="checkbox" name="gender" value="politics" class ="input-radio-style">Politics
+                    <input type="checkbox" name="gender" value="movies" class ="input-radio-style">Movies
+                </div>
+                <div class="rgtrn-txt-div">
+                    <label for="email" class="label-style">Email Id</label>
+                    <input type="email" name="email" class ="input-text-style" placeholder="Enter valid email id" >
+                </div>
+                <div class="rgtrn-txt-div"> 
+                    <label for="username" class="label-style">Username</label>
+                    <input type="text" name="username" class ="input-text-style" placeholder="Choose a username win min.5 characters and max.9 characters" >
+                </div>
+                <div class="rgtrn-txt-div">
+                    <label for="password" class="label-style">Password</label>
+                    <input type="password" name="password" class ="input-text-style" placeholder="Enter password. Password requirements provided below" >
+                    <div class="psswd-req1">
+                        <ul class=psswd-req-ul>
+                            <li class="psswd-req-list">One lower case character</li>
+                            <li class="psswd-req-list">One upper case character</li>
+                            <li class="psswd-req-list">One number</li>
+                        </ul>
+                    </div>
+                    <div class="psswd-req2">
+                        <ul class=psswd-req-ul>
+                            <li class="psswd-req-list">One special character</li>
+                            <li class="psswd-req-list">8 characters minimum</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="rgtrn-btn-div">
+                        <button type="submit" value="Register" class="rgtrn-button">Register</button>
+                    </div>
+                </div>
+                </fieldset>
+            </form>
+            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size:62.5%;
+   /*display:block;*/
+}
+body {
+    font-size:1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html,
+body,
+div,
+form,
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+div{
+    display:block;
+}
+
+.rgtrn-container {
+    width:520px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.rgtrn-img-div {
+    margin-top:30px;
+}
+.rgtrn-img {
+    width:120px;
+    height:100px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+h1{
+    text-align:center;
+    width:100%;
+    font-size: 3rem;
+    margin-bottom:20px;
+}
+p {
+    display:flex;
+    justify-content: center;
+}
+.span-header{
+    padding-right: 20px;
+}
+
+a {
+    color: #007989;
+    /* width: 100%; */
+    margin-right: 50px;
+}
+
+.rgtrn-txt-div{
+   margin-bottom:20px;
+}
+.label-style{
+    display:block;
+    margin-bottom:10px;
+    
+}
+.label-radio-style
+{ display:block;}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="file"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select {
+    display: inline-block;
+    padding: 0 8px;
+    /*margin-bottom: 24px;*/
+    vertical-align: middle;
+    border-radius: 2px;
+    width: 100%;
+    min-height: 32px;
+    background-color: #ffffff;
+    border: 1px solid rgba(36, 28, 21, 0.3);
+    -ms-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    outline:none;
+}
+
+input[type="radio"], input[type="checkbox"] 
+{margin:10px;
+margin-right:8px; }
+
+textarea,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+    border: 2px solid #007989;
+    border-radius: 2px;   
+    background-color: #ffffff;
+   
+}
+
+.psswd-req1 {
+    float:left;
+    width:50%;
+}
+.psswd-req2 {
+    float:left;
+    width:50%;
+}
+ul{ list-style-position: outside;}
+
+.psswd-req-list {
+    font-size:1.4rem;
+    padding-bottom:5px;
+    color:#007989;
+    font-weight: 500;
+}
+
+.rgtrn-button {
+    font-size: 1.6rem;
+    width: 100%;
+    color: white;
+    min-height: 52px;
+    line-height: 20px;
+    background-color: #007989;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.rgtrn-button:hover {
+    background-color: #015d69;
+}
+

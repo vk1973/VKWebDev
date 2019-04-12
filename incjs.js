@@ -29,17 +29,25 @@ function loadtable() {
     
 
     var tbl = document.querySelector("#table tbody");
-    if (tbl != null) {
-        for (var i = 0; i < tbl.rows.length; i++) {
-            for (var j = 0; j < tbl.rows[i].cells.length; j++)
-              if (j === 1) {
-                tbl.rows[i].cells[j].onclick = function () { getval(this); };}
-        }
-    }
+    // if (tbl != null) {
+    //     for (var i = 0; i < tbl.rows.length; i++) {
+          
+    //         for (var j = 0; j < tbl.rows[i].cells.length; j++)
+    //           if (j === 1) {
+    //             tbl.rows[i].cells[j].onclick = function (e) 
+    //             { var target = e.target;
+    //               target= target.parentNode;
+    //               var theCells = target.getElementsByTagName("td");
+    //               for(var i=0;i<theCells.length;i++){
+    //                 alert(theCells[i].innerHTML);
+    //               } };}
+    //     }
+    // }
 
-    function getval(cel) {
-        alert(cel.innerHTML);
-    }
+    // function getval() {
+      
+    //     // alert(cel.innerHTML);
+    // }
 
 }
 
@@ -78,29 +86,43 @@ issuearray.forEach((obj,i) => {
     var tr = tbody.insertRow(i);}
    
     Object.keys(obj).forEach((name, j) => {
-      if (j === 0){ 
-        var cell = tr.insertCell(j);
-        cell.innerHTML = '<a href="#">'+obj[name]+'</a>';
-      } else {
+      // if (j === 0){ 
+      //   var cell = tr.insertCell(j);
+      //   cell.innerHTML = '<a href="#">'+obj[name]+'</a>';
+      // } else {
       var cell = tr.insertCell(j);
-      cell.innerHTML = obj[name];}
+      cell.innerHTML = obj[name];
     });
 
     //add edit option with a link to edit page
 
     // new column for edit row is now commented since an hyperlink has been added to the first column
-    // var link = document.createElement("a");
-    // link.setAttribute("href", "incedit.html")
-    // link.className = "linkclass";
-    // var linkText = document.createTextNode("Edit");
-    // link.appendChild(linkText);
+    var link = document.createElement("button");
+    link.setAttribute("id", "editbtn");
+    link.className = "linkclass";
+    var linkText = document.createTextNode("Edit");
+    link.appendChild(linkText);
 
-    // var newcell = tr.insertCell(-1);
-    // newcell.appendChild(link);
-    // tbody.appendChild(tr);
+    var newcell = tr.insertCell(-1);
+    newcell.appendChild(link);
+    tbody.appendChild(tr);
   });
   
   document.getElementById("table").className ="tabledivclass";
+  var myTable = document.getElementById('table');
+  
+  myTable.addEventListener('click', function (e) {
+    if (e.target && e.target.innerHTML === "Edit"){
+    data = [];
+    var button = e.target;
+    var cell = button.parentNode;
+    var row = cell.parentNode;
+    var rowdata = row.getElementsByTagName("td");
+    for(var i=0;i<rowdata.length;i++){
+                    data.push(rowdata[i].innerHTML);
+                  }
+    alert(data);}
+}, false);
 }
 
 function getlastimseq() {
@@ -109,7 +131,7 @@ function getlastimseq() {
     var rowindex = tableloaded.rows.length-1;
     var last = tableloaded.rows[rowindex].cells[0].innerHTML;
 
-    lastid = last.substring(14,21);
+    lastid = last.substring(2,9);
 
     return parseInt(lastid);
 }

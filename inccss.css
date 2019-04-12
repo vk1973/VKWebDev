@@ -11,7 +11,11 @@ list-style:none;
 
 .incadd {
 width:40vw;
-margin:50px auto;
+/*position : absolute;*/
+margin:70px auto;
+border: 1px solid #cdcdcd;
+/*align-items:center;*/
+/*text-align: center;*/
 }
 
 #incaddbtn{
@@ -38,23 +42,30 @@ border-radius: 8%;
 .incadd label {
   text-align: right;
   padding-right: 10px;
-  margin:10px;
+  margin-right:10px;
+  margin-bottom:10px;
   width: 150px;
+  
 }
 
 .incadd input {
   width: 300px;
-  margin:10px;
+  margin-right:10px;
+  margin-bottom:10px;
+  
 }
 
 .incadd select {
   padding-right: 10px;
-  margin:10px;
+  margin-right:10px;
+  margin-bottom:10px;
+  
 }
 
 .incadd label, .incadd input, .incadd select{
 float: left;
 font-size: 1rem;
+
 }
 
 .incadd br {
@@ -63,21 +74,22 @@ clear: both;
 
 .incadd textarea {
   /*padding-right: 20px;*/
-  margin:10px;
+  margin-right:10px;
+  margin-bottom:10px;
+  
 }
 
 
 .tabledivclass {
   /*border-color: rgb(138,133,142);*/
   border: 2px solid;
-  width: 100%;
-  border-collapse: collapse;
-  border: 2px solid mediumpurple;
- 
 
-}
+  border-collapse: collapse;
+  border: 2px solid #cdcdcd;
+  
+ }
 thead {
-  background: mediumpurple;
+  background: #7275eb;
   color: white;
 }
 th, td {
@@ -86,6 +98,20 @@ th, td {
 }
 
 .container {
-width: 60vw;
-margin: 20px auto;
+width: 80vw;
+position:absolute;
+margin: 30px auto;
+z-index:0;
+position: relative;
+/*text-align: center;*/
+}
+
+.navdiv {
+  background: #7275eb;
+  /*height: 70px;*/
+  position:fixed;
+  top: 0px;
+  z-index: 9999;
+  width: 100%;
+  
 }

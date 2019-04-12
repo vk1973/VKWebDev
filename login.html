@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+
+    <!-- Learning to construct login page layers from mailchimp.com login page -->
+</head>
+
+<body>
+    <!-- Start from inner most form and fieldset (including error message field) -->
+    <div class="login-container">
+        <!-- This Div will contain 6 Divs - login header, error message, username block, password block, submit button, forgot password -->
+        <!-- login header - h1 for header centered; p to create flex for span and a tags-->
+        <div class="logo-div">
+            <img src="Header-Icon-User.png" class="logo-img">
+        </div>
+        <form>
+            <div class="login-header">
+                <h1 class="login-txt">Log In</h1>
+                <p class="rgstrn-prompt-flex">
+                    <span class="rgstrn-prompt">Need an account?</span>
+                    <a href="registration.html"> Register</a>
+                </p>
+            </div>
+            <fieldset>
+                <div class="field1-wrapper1">
+                    <div class="field-wrapper">
+                        <label for="usrnme" class="label-fields">Username</label>
+                        <input type="text" name="usrname" id="usrname" autofocus="autofocus" class="input-fld-text" placeholder ="Enter your username">
+                    </div>
+                    <div class="field-wrapper">
+                        <label for="psswd" class="label-fields" >Password</label>
+                        <input type="password" name="psswd" id="psswd" class="input-fld-text" placeholder="Enter password">
+                    </div>
+                    <div class="field-wrapper">
+                        <button type="submit" value="Log In" class="login-button">Log in</button>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="forgot-help">
+                <p class="forgot-text-flex">
+                    <a href="#">Forgot username?</a>
+                    <a href="#">Forgot password?</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
