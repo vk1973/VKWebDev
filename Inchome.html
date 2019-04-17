@@ -5,15 +5,19 @@
   <link rel="stylesheet" type="text/css" href="inccss.css" />
 </head>
 <body>
-<div class="navdiv">
-  <nav class="topnav">
+
+<nav>
+
     <ul class="navul" id = "navul">
+      <li id="navli0" class = "navli">
+        Logo
+</li>
+
       <li id="navli1" class="navli">Incident List</li>
       <li id = "navli2" class="navli">New Incident</li>
-</ul>
+    </ul>
 <!--<a href="#">New Incident</a>-->
 </nav>
-</div>
 <div class="container">
 <div class = "incadd" id="incadd">
   <label>Issue Id:</label><input type="text" id="issueid" placeholder="Issue Id" disabled = "disabled"/><br>
@@ -31,7 +35,7 @@
   </select><br>
   <label>Issue Occurred Date:</label><input type="date" id="issuedte" placeholder="Issue Occurred Date"/><br>
   <label>Issue Description: </label><textarea name="" id="issuedesc" cols="40" rows="10" placeholder="Issue Desc"></textarea><br>
-  <br>    
+  <br>
   <br>
   <button id="incaddbtn">Submit</button>
   <br>

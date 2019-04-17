@@ -1,16 +1,73 @@
+* {
+box-sizing: border-box;
+margin: 0px;
+padding:0;
+}
+/* html {
+box-sizing: border-box;
+} */
 body {
-margin:0px;
+/* margin:0px; */
 font-family: sans-serif;
 font-size:12px;
+/* width: auto; */
+}
+.container {
+/* width: 80vw; */
+/* position:absolute; */
+display:flex;
+max-width:960px;
+flex-direction: column;
+margin: 30px auto;
+/* z-index:0;
+position: relative; */
+/*text-align: center;*/
+}
+.parentnav {
+position: fixed;
+top:0;
+left:0;
+margin:auto;
+width: 100%;
 }
 
-.navul {
-display:flex;
-list-style:none;
+.navbar {
+display: flex;
+justify-content: space-between;
 }
+
+.menu {
+display: flex;
+align-items: center;
+}
+
+.menu ul {
+display:flex;
+justify-content: flex-end;
+align-items: center;
+list-style:none;
+/* flex-direction:column; */
+background: #7275eb;
+height:60px;
+
+}
+
+
+.menu li {
+padding: 5px;
+margin-left: 20px;
+font-size: 1.2rem;
+cursor: pointer;
+color: white;
+list-style: none;
+}
+/* .navul li:first-child{
+margin-right: auto;
+}
+.logo .navli { flex:1;} */
 
 .incadd {
-width:40vw;
+/* width:40vw; */
 /*position : absolute;*/
 margin:70px auto;
 border: 1px solid #cdcdcd;
@@ -28,16 +85,7 @@ border: 1px solid #cdcdcd;
   margin-right: 150px;
 }
 
-.navli {
-padding: 5px;
-margin-right: 20px;
-font-size: 1.2rem;
-cursor: pointer;
-background: mediumpurple;
-color: white;
-border: 1px solid;
-border-radius: 8%;
-}
+
 
 .incadd label {
   text-align: right;
@@ -45,21 +93,21 @@ border-radius: 8%;
   margin-right:10px;
   margin-bottom:10px;
   width: 150px;
-  
+
 }
 
 .incadd input {
   width: 300px;
   margin-right:10px;
   margin-bottom:10px;
-  
+
 }
 
 .incadd select {
   padding-right: 10px;
   margin-right:10px;
   margin-bottom:10px;
-  
+
 }
 
 .incadd label, .incadd input, .incadd select{
@@ -76,7 +124,7 @@ clear: both;
   /*padding-right: 20px;*/
   margin-right:10px;
   margin-bottom:10px;
-  
+
 }
 
 
@@ -86,7 +134,7 @@ clear: both;
 
   border-collapse: collapse;
   border: 2px solid #cdcdcd;
-  
+
  }
 thead {
   background: #7275eb;
@@ -97,21 +145,16 @@ th, td {
   border-collapse: collapse;
 }
 
-.container {
-width: 80vw;
-position:absolute;
-margin: 30px auto;
-z-index:0;
-position: relative;
-/*text-align: center;*/
-}
 
-.navdiv {
+
+/* .navdiv {
   background: #7275eb;
-  /*height: 70px;*/
+  height: 70px;
   position:fixed;
   top: 0px;
   z-index: 9999;
   width: 100%;
-  
-}
+flex-flow:  row-wrap;
+display:flex;
+
+} */
