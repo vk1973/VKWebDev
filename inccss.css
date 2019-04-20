@@ -3,26 +3,18 @@ box-sizing: border-box;
 margin: 0px;
 padding:0;
 }
-/* html {
-box-sizing: border-box;
-} */
+
 body {
-/* margin:0px; */
 font-family: sans-serif;
 font-size:12px;
-/* width: auto; */
 }
 .container {
-/* width: 80vw; */
-/* position:absolute; */
 display:flex;
-max-width:960px;
 flex-direction: column;
 margin: 30px auto;
-/* z-index:0;
-position: relative; */
-/*text-align: center;*/
+max-width:960px;
 }
+
 .parentnav {
 position: fixed;
 top:0;
@@ -34,10 +26,19 @@ width: 100%;
 .navbar {
 display: flex;
 justify-content: space-between;
+background: #7275eb;
+}
+
+.logo {
+ color: white;
+ padding: 10px;
+ font-size: 1.6rem;
+ margin-left:45px;
+ 
 }
 
 .menu {
-display: flex;
+/*display: flex;*/
 align-items: center;
 }
 
@@ -46,7 +47,6 @@ display:flex;
 justify-content: flex-end;
 align-items: center;
 list-style:none;
-/* flex-direction:column; */
 background: #7275eb;
 height:60px;
 
@@ -61,18 +61,11 @@ cursor: pointer;
 color: white;
 list-style: none;
 }
-/* .navul li:first-child{
-margin-right: auto;
-}
-.logo .navli { flex:1;} */
+
 
 .incadd {
-/* width:40vw; */
-/*position : absolute;*/
 margin:70px auto;
 border: 1px solid #cdcdcd;
-/*align-items:center;*/
-/*text-align: center;*/
 }
 
 #incaddbtn{
@@ -121,7 +114,6 @@ clear: both;
 }
 
 .incadd textarea {
-  /*padding-right: 20px;*/
   margin-right:10px;
   margin-bottom:10px;
 
@@ -129,7 +121,6 @@ clear: both;
 
 
 .tabledivclass {
-  /*border-color: rgb(138,133,142);*/
   border: 2px solid;
 
   border-collapse: collapse;
@@ -145,16 +136,3 @@ th, td {
   border-collapse: collapse;
 }
 
-
-
-/* .navdiv {
-  background: #7275eb;
-  height: 70px;
-  position:fixed;
-  top: 0px;
-  z-index: 9999;
-  width: 100%;
-flex-flow:  row-wrap;
-display:flex;
-
-} */

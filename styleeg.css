@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.container {
+    width: 960px;
+    display: flex;
+    flex-direction:column;
+}
+
+.navcontainer{
+    position:fixed;
+    top:0;
+    left:0;
+    margin: auto;
+    width:100%;
+}
+
+.navbar {
+    display:flex;
+    justify-content: space-between;
+    background: dodgerblue;
+}
+
+.menu ul {
+    display:flex;
+
+}
+
+.menu li {
+    list-style: none;
+    padding:5px;
+    color: white;
+}
+
+.logo {
+    padding:5px;
+}
