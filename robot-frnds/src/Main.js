@@ -51,7 +51,7 @@ class Main extends Component {
         
     }
 
-// filteredrobots captures all robots that match the text entere in search field
+// filteredrobots captures all robots that match the text entered in search field
 // this set of filteredrobots is passed to CardArray.js to display the filtered result
     render () {
         const filteredrobots = this.state.robots.filter(robot => {
